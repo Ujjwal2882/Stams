@@ -1,0 +1,22 @@
+ 
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    # Uncomment runtime if you have NVIDIA Container Toolkit installed
+    # runtime: nvidia
+    volumes:
+      - ./targets:/app/targets
+      - ./storage:/app/storage
+      - ./.env:/app/.env
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules

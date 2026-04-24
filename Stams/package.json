@@ -1,0 +1,17 @@
+{
+  "name": "sentinelvision-root",
+  "version": "1.0.0",
+  "description": "Root command manager for SentinelVision",
+  "scripts": {
+    "docker:all": "docker compose up --build",
+    "docker:backend": "docker compose up backend --build",
+    "docker:frontend": "docker compose up frontend --build",
+    "docker:down": "docker compose down",
+    "restart:backend": "docker compose restart backend",
+    "restart:frontend": "docker compose restart frontend",
+    "logs:backend": "docker compose logs -f backend",
+    "logs:frontend": "docker compose logs -f frontend",
+    "dev:backend": "uvicorn api.server:app --host 0.0.0.0 --port 8000 --reload",
+    "dev:frontend": "npm run dev --prefix frontend"
+  }
+}

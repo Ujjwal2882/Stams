@@ -1,0 +1,55 @@
+# ─── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+.eggs/
+venv/
+.venv/
+env/
+
+# ─── Environment ──────────────────────────────────────────────────
+.env
+
+# ─── Models (large binaries) ─────────────────────────────────────
+models/*.pt
+models/*.engine
+models/*.onnx
+models/arcface/
+
+# ─── Storage (runtime data) ──────────────────────────────────────
+storage/embeddings/*.npy
+storage/snapshots/
+storage/logs/*.log
+
+# ─── Targets ──────────────────────────────────────────────────────
+targets/*.jpg
+targets/*.png
+targets/*.jpeg
+
+# ─── Node / Frontend ─────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+
+# ─── IDE / OS ─────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Docker ───────────────────────────────────────────────────────
+.dockerignore
+
+# ─── Misc ─────────────────────────────────────────────────────────
+*.log
+*.bak
+*.tmp

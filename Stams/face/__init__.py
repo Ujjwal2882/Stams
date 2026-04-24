@@ -1,0 +1,1 @@
+"""SentinelVision — Face Recognition Package."""
